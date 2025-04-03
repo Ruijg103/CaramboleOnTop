@@ -140,7 +140,7 @@
             android:text="STOP\nService"
             android:textColor="@color/white"
             android:textSize="20sp"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,RtlHardcoded" />
 
         <Button
             android:id="@+id/btnExit"
@@ -151,7 +151,7 @@
             android:text="Exit\n"
             android:textColor="@color/white"
             android:textSize="20sp"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,RtlHardcoded" />
     </LinearLayout>
 </LinearLayout>
 
@@ -163,7 +163,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
 
     <LinearLayout
         android:layout_width="match_parent"

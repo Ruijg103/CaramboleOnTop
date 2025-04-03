@@ -394,7 +394,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
 
-       //  lateinit var mPackage: String
+        @SuppressLint("StaticFieldLeak")
         var mContext: Context? = null
         var bServiceStarted: Boolean = false
         var intentOfService: Intent?  = null
