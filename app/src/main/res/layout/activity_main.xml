@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/LightGrey"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Interval Tijd:"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/tvIntervalTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:text="10"
+                android:inputType="number"
+                android:hint="Geef tijdsduur tussen pogingen"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Herhalingen:"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/tvintervalHerhalingen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:background="@color/white"
+                android:inputType="number"
+                android:text="91"
+                android:hint="Geef maximum herhalingen"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnStartStop"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/purple_200"
+            android:text="STOP"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/purple_200"
+            android:text="Exit"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textColor="@android:color/background_dark"
+                android:textSize="15sp"
+                android:text="Niet aktief"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>

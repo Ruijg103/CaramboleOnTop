@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightGrey"
+    tools:context=".MainActivity"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:id="@+id/maintje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        app:subtitleTextColor="@color/white"
+        app:titleTextColor="@color/white" />
+    </LinearLayout>
+
+
+    <!-- Divide screen in two parts -->
+
+ <LinearLayout
+     android:layout_width="0dp"
+     android:layout_weight="50"
+     android:layout_height="wrap_content"
+     app:layout_constraintTop_toBottomOf="@+id/maintje"
+     app:layout_constraintLeft_toLeftOf="@+id/maintje"
+     android:baselineAligned="false"
+     android:orientation="horizontal">
+
+     <!-- Now fill all fields on left side -->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+
+    <!--Interval time -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:paddingStart="10dp"
+            android:text="Interval Tijd:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/tvIntervalTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:inputType="number"
+            android:hint="Geef een waarde in seconden"
+            android:text="10"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Number of repeats -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:paddingStart="10dp"
+            android:text="Herhalingen:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/tvintervalHerhalingen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:hint="Geef maximum aantal herhalingen"
+            android:background="@color/white"
+            android:text="91"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Buttons-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnStartStop"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/purple_200"
+            android:text="STOP\nService"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/purple_200"
+            android:text="Exit\n"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>
+
+     <!-- Tweede deel van het scherm -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="50"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textColor="@android:color/background_dark"
+                android:textSize="15sp"
+                android:text="Niet aktief"
+                android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+</LinearLayout>
+ </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
