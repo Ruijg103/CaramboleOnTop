@@ -161,12 +161,15 @@ class MainActivity : AppCompatActivity() {
         val buildDate = Calendar.getInstance()
         buildDate.timeInMillis = BuildConfig.BUILD_TIME
 
+
         versie = versie + " " + String.format(Locale.ENGLISH, "%02d-%02d-%d %02d:%02d",
             buildDate[Calendar.DAY_OF_MONTH],
             (buildDate[Calendar.MONTH] + 1),
             buildDate[Calendar.YEAR],
             buildDate[Calendar.HOUR_OF_DAY],
             buildDate[Calendar.MINUTE] )
+
+
 
         toolbar.setTitle("Maak \"CaramboleComputer\" zichtbaar        ($versie)")
         setSupportActionBar(toolbar)
