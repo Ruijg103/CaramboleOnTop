@@ -7,7 +7,7 @@ plugins {
 android {
     namespace = "nl.pruijgr.caramboleontop"
     compileSdk = 35
-    val versionName = "1.1"
+    val versionName = "1.2"
     val archivesBaseName= "CaramboleOnTop$versionName"
     buildFeatures {
         buildConfig = true

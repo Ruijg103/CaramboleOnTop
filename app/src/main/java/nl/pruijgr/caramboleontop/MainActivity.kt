@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
                 btnStartStop.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
 
             }
-        }
+        } 
         btnStartStop.text="Start Service"
 
         btnExit=findViewById(R.id.btnExit)
