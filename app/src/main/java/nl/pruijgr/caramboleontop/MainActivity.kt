@@ -84,10 +84,31 @@ class MainActivity : AppCompatActivity() {
 
         btnStartStop=findViewById(R.id.btnStartStop)
         btnStartStop.setOnClickListener{ startStopPushed() }
+        btnStartStop.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                Log.d(TAG,"btnStart lost focus")
+                btnStartStop.setBackgroundColor(ContextCompat.getColor(this, R.color.purple_200))
+            } else {
+                Log.d(TAG,"btnStart got focus")
+                btnStartStop.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+
+            }
+        }
         btnStartStop.text="Start Service"
 
         btnExit=findViewById(R.id.btnExit)
         btnExit.setOnClickListener { exitPushed() }
+        btnExit.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                Log.d(TAG, "btnExit Lost focus")
+                // code to execute when EditText loses focus
+                btnExit.setBackgroundColor(ContextCompat.getColor(this,R.color.purple_200))
+            } else {
+                Log.d(TAG,"btnExit got focus")
+                btnExit.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+
+            }
+        }
 
         tvIntervalTime=findViewById(R.id.tvIntervalTime)
         tvIntervalTime.setOnFocusChangeListener { _, hasFocus ->
@@ -121,6 +142,12 @@ class MainActivity : AppCompatActivity() {
 
         initToolBar()
 
+        btnStartStop.setFocusableInTouchMode(true)
+        btnStartStop.requestFocus()
+        btnStartStop.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+
+
+
         try {
             val pm: PackageManager = packageManager
             intentToTop = pm.getLaunchIntentForPackage(Constants.CARAMBOLECOMPUTER)
@@ -128,6 +155,12 @@ class MainActivity : AppCompatActivity() {
             if (intentToTop == null) {
                 mStatusText="${Constants.CARAMBOLECOMPUTER}\nNiet gevonden"
                 tvText.text=mStatusText
+
+                btnExit.setFocusableInTouchMode(true)
+                btnExit.requestFocus()
+                btnExit.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+
+                btnStartStop.setBackgroundColor(ContextCompat.getColor(this, R.color.LightGrey))
                 Log.d(TAG,mStatusText)
                 Log.d(TAG,"Package not found..exit with delay")
                 exitWithDelay()
@@ -268,6 +301,7 @@ class MainActivity : AppCompatActivity() {
             mStatusText="Stop Request"
             tvText.text=mStatusText
             btnStartStop.visibility=View.INVISIBLE
+            btnExit.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
 
             Prefs.bStopRequest=true
             if (intentOfService!=null) {
